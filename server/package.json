@@ -1,0 +1,15 @@
+{
+  "name": "p2p-file-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "smoke": "node smoke.mjs",
+    "test:node": "node test-node.mjs"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  }
+}

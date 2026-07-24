@@ -1,0 +1,20 @@
+{
+  "name": "p2p-file-share",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "start:node": "node scripts/start.mjs --node",
+    "setup": "node scripts/start.mjs --setup-only",
+    "predev": "node scripts/start.mjs --setup-only",
+    "dev": "concurrently -n server,node,web -c blue,yellow,green \"node scripts/start.mjs --server-only --dev\" \"node scripts/start.mjs --server-only --node --dev\" \"npm --prefix client run dev\"",
+    "smoke": "npm --prefix server run smoke",
+    "test:node": "npm --prefix server run test:node",
+    "test:e2e": "npm --prefix e2e run test",
+    "bench": "node e2e/bench.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

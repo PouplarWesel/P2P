@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+build/
+coverage/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local tooling and deployment state
+.vercel/
+.railway/
+.turbo/
+.cache/
+.npm/
+.npmrc
+
+# Runtime data and logs
+*.log
+logs/
+server/files-node/
+tmp/
+temp/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test artifacts
+playwright-report/
+test-results/
