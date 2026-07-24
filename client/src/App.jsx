@@ -401,7 +401,10 @@ export default function App() {
                 <div className={connected ? 'status-good online-pulse' : 'status-bad'}>
                   {connected ? 'ONLINE' : 'CONNECTING'}<span className="rolling-dots" aria-hidden="true" />
                 </div>
-                <div>{stats.peers} peers currently online</div>
+                <div>
+                  {stats.peers} peer{stats.peers === 1 ? '' : 's'}{' '}
+                  {stats.peers > 0 ? `${stats.peers === 1 ? '(urself)' : '(urself + others)'} ` : ''}online
+                </div>
                 <div>{transferMode === 'server' ? 'server only' : p2pCapable === false ? 'privacy mode: no peers' : `${transferMode} mode ready`}</div>
               </div>
             </section>
